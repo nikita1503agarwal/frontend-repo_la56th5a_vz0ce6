@@ -4,37 +4,37 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-8 md:grid-cols-12">
           <div className="md:col-span-5">
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Let’s talk about your roadmap</h2>
-            <p className="mt-4 text-slate-300">Share your priorities and we’ll craft a tailored plan. Expect a response within one business day.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Give us a buzz</h2>
+            <p className="mt-4 text-slate-300">We collaborate with clients globally to solve their problems. Our services are not limited by Borders — deliver anywhere in World.</p>
             <div className="mt-8 space-y-3 text-slate-200/90">
-              <p><strong>Email:</strong> hello@novaintelli.com</p>
-              <p><strong>Phone:</strong> +1 (555) 012-3456</p>
-              <p><strong>HQ:</strong> Austin, TX</p>
+              <p><strong>Email:</strong> info@gitv.pk</p>
+              <p><strong>Phone:</strong> +92 (000) 000-0000</p>
+              <p><strong>Office:</strong> Pakistan</p>
             </div>
           </div>
           <div className="md:col-span-7">
             <form className="rounded-2xl border border-white/10 bg-slate-900/50 p-6 grid gap-4">
               <div>
-                <label className="text-sm text-slate-300">Full name</label>
-                <input className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="Jane Doe" />
+                <label className="text-sm text-slate-300">Your Name</label>
+                <input className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="Your Name" />
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm text-slate-300">Work email</label>
-                  <input type="email" className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="jane@company.com" />
+                  <label className="text-sm text-slate-300">Your Email</label>
+                  <input type="email" className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label className="text-sm text-slate-300">Company</label>
-                  <input className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="Acme Inc." />
+                  <label className="text-sm text-slate-300">Subject</label>
+                  <input className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="Inquiry" />
                 </div>
               </div>
               <div>
-                <label className="text-sm text-slate-300">How can we help?</label>
-                <textarea rows={4} className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="Briefly describe your goals"></textarea>
+                <label className="text-sm text-slate-300">Message</label>
+                <textarea rows={4} className="mt-1 w-full rounded-xl bg-slate-800/80 border border-white/10 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500" placeholder="Your message"></textarea>
               </div>
               <div className="flex items-center justify-between">
-                <div className="text-xs text-slate-400">By submitting, you agree to our privacy policy.</div>
-                <button className="rounded-xl bg-gradient-to-r from-violet-500 via-sky-500 to-amber-400 px-5 py-2.5 text-sm font-semibold text-white shadow hover:shadow-lg transition" type="button">Request Consultation</button>
+                <div className="text-xs text-slate-400">We respect your privacy.</div>
+                <button className="rounded-xl bg-gradient-to-r from-violet-500 via-sky-500 to-amber-400 px-5 py-2.5 text-sm font-semibold text-white shadow hover:shadow-lg transition" type="button">Send</button>
               </div>
             </form>
           </div>

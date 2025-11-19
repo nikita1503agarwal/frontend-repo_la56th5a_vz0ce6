@@ -23,8 +23,8 @@ function App() {
       </main>
       <footer className="border-t border-white/10 py-10">
         <div className="mx-auto max-w-6xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-400">© {new Date().getFullYear()} NovaIntelli. All rights reserved.</p>
-          <div className="text-sm text-slate-400">Built with secure, scalable engineering.</div>
+          <p className="text-sm text-slate-400">© {new Date().getFullYear()} Global IT Vision. All rights reserved.</p>
+          <div className="text-sm text-slate-400">Pioneer of Voice Ads / Robo Calls in Pakistan.</div>
         </div>
       </footer>
     </div>
