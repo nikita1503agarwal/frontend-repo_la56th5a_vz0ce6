@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X, PhoneCall } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 function NavLink({ href, children, onClick }) {
   return (
@@ -19,60 +19,59 @@ export default function Navbar() {
   const close = () => setOpen(false)
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="mt-4 rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur supports-[backdrop-filter]:bg-slate-900/50">
-          <div className="flex items-center justify-between px-4 py-3">
-            <a href="#home" className="flex items-center gap-2 group">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-violet-500/60 via-sky-500/60 to-amber-400/60 blur-md opacity-70 group-hover:opacity-90 transition pointer-events-none" />
-                <div className="relative grid h-9 w-9 place-items-center rounded-xl bg-slate-900 ring-1 ring-white/10">
-                  <PhoneCall className="h-5 w-5 text-white" />
-                </div>
-              </div>
-              <span className="text-white font-semibold tracking-tight text-lg">Global IT Vision</span>
+    <header className="fixed top-0 inset-x-0 z-50 text-white">
+      <div className="mx-auto max-w-7xl px-5">
+        <div className="flex items-center justify-between py-4">
+          <a href="#home" className="flex items-center gap-3">
+            <img
+              src="/gitv-logo.png"
+              alt="Global IT Vision logo"
+              className="h-9 w-auto object-contain"
+            />
+            <span className="font-semibold tracking-tight text-lg">Global IT Vision</span>
+          </a>
+
+          <nav className="hidden md:flex items-center">
+            <NavLink href="#media">Media coverage</NavLink>
+            <NavLink href="#rnd">Research & R&D</NavLink>
+            <NavLink href="#bpo">Call Center & BPO</NavLink>
+            <NavLink href="#testimonials">Testimonials</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+            <a
+              href="#contact"
+              className="ml-2 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 via-sky-500 to-amber-400 px-4 py-2 text-sm font-semibold text-white shadow hover:shadow-lg transition"
+            >
+              Give us a buzz
             </a>
-            <nav className="hidden md:flex items-center">
-              <NavLink href="#media">Media coverage</NavLink>
-              <NavLink href="#rnd">Research & R&D</NavLink>
-              <NavLink href="#bpo">Call Center & BPO</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+          </nav>
+
+          <button
+            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ring-white/15"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+
+        {open && (
+          <div className="md:hidden border-t border-white/10 py-3">
+            <div className="flex flex-col">
+              <NavLink href="#media" onClick={close}>Media coverage</NavLink>
+              <NavLink href="#rnd" onClick={close}>Research & R&D</NavLink>
+              <NavLink href="#bpo" onClick={close}>Call Center & BPO</NavLink>
+              <NavLink href="#testimonials" onClick={close}>Testimonials</NavLink>
+              <NavLink href="#contact" onClick={close}>Contact</NavLink>
               <a
                 href="#contact"
-                className="ml-2 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 via-sky-500 to-amber-400 px-4 py-2 text-sm font-semibold text-white shadow hover:shadow-lg transition"
+                onClick={close}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 via-sky-500 to-amber-400 px-4 py-2 text-sm font-semibold text-white shadow hover:shadow-lg transition"
               >
                 Give us a buzz
               </a>
-            </nav>
-            <button
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ring-white/15 text-white"
-              onClick={() => setOpen(!open)}
-              aria-label="Toggle menu"
-            >
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
-
-          {open && (
-            <div className="md:hidden border-t border-white/10 px-4 py-3">
-              <div className="flex flex-col">
-                <NavLink href="#media" onClick={close}>Media coverage</NavLink>
-                <NavLink href="#rnd" onClick={close}>Research & R&D</NavLink>
-                <NavLink href="#bpo" onClick={close}>Call Center & BPO</NavLink>
-                <NavLink href="#testimonials" onClick={close}>Testimonials</NavLink>
-                <NavLink href="#contact" onClick={close}>Contact</NavLink>
-                <a
-                  href="#contact"
-                  onClick={close}
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 via-sky-500 to-amber-400 px-4 py-2 text-sm font-semibold text-white shadow hover:shadow-lg transition"
-                >
-                  Give us a buzz
-                </a>
-              </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </header>
   )

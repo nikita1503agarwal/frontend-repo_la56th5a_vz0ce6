@@ -20,6 +20,12 @@
   body {
     @apply antialiased;
   }
+
+  header {
+    background: #111827;
+    color: #fff;
+    padding: 15px 20px;
+  }
 }
 
 /* Custom utility classes for shadcn/ui patterns */
