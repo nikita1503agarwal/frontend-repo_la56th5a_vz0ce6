@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
 import Stories from './components/Stories'
+import SuccessStories from './components/SuccessStories'
 import Contact from './components/Contact'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <About />
         <Services />
+        <SuccessStories />
         <Stories />
         <Contact />
       </main>
